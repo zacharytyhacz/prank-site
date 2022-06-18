@@ -7,7 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link id="favicon" rel="icon" href="/images/logo.png" type="image/x-icon" />
 
-    <link rel="stylesheet" href="/css/styles.css">
     <style>
       body {
         cursor: pointer;
@@ -17,6 +16,14 @@
       }
       video {
         opacity: 0.01;
+      }
+
+      img {
+        position: fixed;
+        z-index: 999;
+        display: none;
+        transform:  translateY(0);
+        transition: transform 0.25s ease;
       }
 
       .get-started {
@@ -35,16 +42,45 @@
         border: 1px solid #EEE;
         pointer-events: none !important;
       }
+
+      .fun1 {
+        left: 0;
+        top: 50vh;
+      }
+
+      .fun2 {
+        left: 10%;
+        top: 20vh;
+      }
+
+      .fun3 {
+        left: 30%;
+        top: 30%;
+      }
+
+      .fun4 {
+        left: 60%;
+        top: 50vh;
+      }
+
+      img:hover {
+        transform:  translateY(-55%) !important;
+      }
     </style>
 </head>
 <body>
+    <div class="get-started">
+      Start Survey
+    </div>
     <video width="1920" controls autoplay>
       <source src="/intro.mp4" type="video/mp4">
       Your browser does not support HTML video.
     </video>
-    <div class="get-started">
-      Start Survey
-    </div>
+
+    <img class="fun1" src="/images/fun1.jpeg" width="512" height="200" alt="Hello"/>
+    <img class="fun2" src="/images/fun2.png" width="1920" height="400" alt="PHP" />
+    <img class="fun3" src="/images/fun3.png" alt=", is whack" />
+    <img class="fun4" src="/images/fun4.jpg" alt="or may be not..."/>
     <script src="/js/scripts.js"></script>
 </body>
 </html>
